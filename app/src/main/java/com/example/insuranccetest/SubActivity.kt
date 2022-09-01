@@ -18,7 +18,7 @@ class SubActivity : AppCompatActivity() {
 
         binding.buttonClose1.setOnClickListener { finish() }
 
-       // val name = intent.getStringExtra("name") ?: ""
+        // val name = intent.getStringExtra("name") ?: ""
         //or
         val name = intent.getStringExtra("name")
         val campus = intent.getStringExtra("campus") ?: ""
@@ -37,7 +37,6 @@ class SubActivity : AppCompatActivity() {
         """.trimIndent()
 
     }
-
 
 
 }

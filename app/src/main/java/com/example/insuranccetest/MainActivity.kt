@@ -1,11 +1,14 @@
 package com.example.insuranccetest
 
+import android.R
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.insuranccetest.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +25,26 @@ class MainActivity : AppCompatActivity() {
         binding.buttonSub.setOnClickListener { sub() }
         setContentView(binding.root)
 
+        //snack bar
+        val mySnackbar = Snackbar.make(findViewById(R.id.content),
+
+            "ewqweqe",
+            Snackbar.LENGTH_SHORT)
+
+
+        mySnackbar.setAction("Undo", MyUndoListener())
+        mySnackbar.show();
+
+
     }
+
+    //snacck bar
+    class MyUndoListener : View.OnClickListener {
+        override fun onClick(v: View) {
+            // Code to undo the user's last action
+        }
+    }
+
 
     private fun sub() {
 
@@ -33,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         val campus = binding.spinnerCampus.selectedItem.toString()
 
         val cgpa = binding.editCGPA.text.toString().toDoubleOrNull() ?: -1.0
+
 
         if (name == "") {
             toast("Invalid name")
