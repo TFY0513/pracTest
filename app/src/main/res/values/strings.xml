@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Insurance</string>
+
+    <string-array name="campusList">
+        <item> KL</item>'
+        <item> Johor</item>
+        <item> Penang</item>
+    x
+
+    </string-array>
+</resources>
